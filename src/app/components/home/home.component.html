@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="unitForm" (ngSubmit)="submitRegistration()" novalidate>
+    <div *ngIf="validateMessage != ''">
+      <h3 class="has-info">{{validateMessage}}</h3>
+    </div>
+    <div class="form-group">
+      <label>Unit name</label>
+      <input type="text" class="form-control" formControlName="name" required autofocus/>
+    </div>
+    <div class="form-group">
+      <label>Code</label>
+      <input type="text" class="form-control" formControlName="code" required/>
+    </div>
+    <div class="form-group">
+      <label>Language</label>
+      <select class="form-control" formControlName="language" required>
+        <option value="">Please select a language</option>
+        <option *ngFor="let l of languages"
+                [value]="l">
+                {{l}}
+              </option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button> 
+  </form>
+</div>

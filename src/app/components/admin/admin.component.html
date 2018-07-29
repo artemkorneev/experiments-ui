@@ -1,0 +1,16 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Code</th>
+    </tr>
+    <tr *ngFor="let unit of units">
+        <td>
+          <a [routerLink]="['/admin/view', unit.id]">{{unit.id}}</a>
+        </td>
+        <td>{{unit.name}}</td>
+        <td>{{unit.code}}</td>
+      </tr>
+  </table>
+</div>

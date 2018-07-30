@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="connect">WebSocket connection:</label>
+      <button *ngIf="!isConnected" class="btn btn-default" (click)="connect()">Connect</button>
+      <button *ngIf="isConnected" class="btn btn-default" (click)="disconnect()">Disconnect</button>
+    </div>
+    <div class="col-md-6">
+      <label for="name">What is your name?</label>
+      <input [(ngModel)]="name" type="text" placeholder="Your name here...">
+      <button id="send" class="btn btn-default" (click)="sendName()">Send</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table id="conversation" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Greetings</th>
+          </tr>
+        </thead>
+        <tbody id="greetings">{{greetings}}</tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!--
+$(function () {
+    $("form").on('submit', function (e) {
+        e.preventDefault();
+    });
+    $( "#connect" ).click(function() { connect(); });
+    $( "#disconnect" ).click(function() { disconnect(); });
+    $( "#send" ).click(function() { sendName(); });
+});</script>
+-->

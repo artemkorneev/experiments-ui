@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+import { WebsocketTestComponent } from './components/websocket-test/websocket-test.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'admin/view/:id',
     component: ViewRegistrationComponent
+  },
+  {
+    path: 'ws',
+    component: WebsocketTestComponent
   }
 ];
 

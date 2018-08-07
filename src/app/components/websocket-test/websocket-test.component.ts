@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import '../../../sockjs.min.js';
-import '../../../stomp.min.js';
+import * as SockJS from '../../../sockjs.min.js';
+import { Stomp } from '../../../stomp.min.js';
 
 @Component({
   selector: 'app-websocket-test',
